@@ -51,6 +51,7 @@ set /a contador=0
 for /f "delims=" %%i in (%caminho%) do (
     set /a contador+=1
     echo Linha: !contador! ^| %%i
+    start %%i
 )
 endlocal
 )
@@ -65,4 +66,4 @@ pause >nul
 cls
 goto main
 
-pause >nul
+pause >nul                                    
