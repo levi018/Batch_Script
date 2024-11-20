@@ -1,29 +1,29 @@
 @echo off
 
-rem Configuração de Layout
+rem ConfiguraÃ§Ã£o de Layout
 title Testar Link Whitlist or Black List
 color 09
 mode con lines=30 cols=90
 
-rem Gráfico
+rem GrÃ¡fico
 :main
-echo ²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²
+echo Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²
 echo       ___________              __                 .____    .__        __            
 echo       ^\__    ___^/___   _______^/  ^|______ _______  ^|    ^|   ^|__^| ____ ^|  ^| __  ______
 echo         ^|    ^|_^/ __ ^\ ^/  ___^/^\   __^\__  ^\^\_  __ ^\ ^|    ^|   ^|  ^|^/    ^\^|  ^|^/ ^/ ^/  ___^/
 echo         ^|    ^|^\  ___^/ ^\___ ^\  ^|  ^|  ^/ __ ^\^|  ^| ^\^/ ^|    ^|___^|  ^|   ^|  ^\    ^<  ^\___ ^\ 
 echo         ^|____^| ^\___  ^>____  ^> ^|__^| ^(____  ^/__^|    ^|_______ ^\__^|___^|  ^/__^|_ ^\^/____  ^>
 echo                    ^\^/     ^\^/            ^\^/                ^\^/       ^\^/     ^\^/     ^\^/ 
-echo ²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²
+echo Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²
 echo.
 
-echo   þþþþþþþþþþþþþþþþþþ                þþþþþþþþþþþþþþþþþþþþþþþþþþþþ       
-echo   þ 1. Ping                         þ 2. Testar White/Black List
-echo   þ 3. Tracert                       
-echo   þþþþþþþþþþþþþþþþþþ                þþþþþþþþþþþþþþþþþþþþþþþþþþþþ
+echo   Ã¾Ã¾Ã¾Ã¾Ã¾Ã¾Ã¾Ã¾Ã¾Ã¾Ã¾Ã¾Ã¾Ã¾Ã¾Ã¾Ã¾Ã¾                Ã¾Ã¾Ã¾Ã¾Ã¾Ã¾Ã¾Ã¾Ã¾Ã¾Ã¾Ã¾Ã¾Ã¾Ã¾Ã¾Ã¾Ã¾Ã¾Ã¾Ã¾Ã¾Ã¾Ã¾Ã¾Ã¾Ã¾Ã¾       
+echo   Ã¾ 1. Ping                         Ã¾ 2. Testar White/Black List
+echo   Ã¾ 3. Tracert                       
+echo   Ã¾Ã¾Ã¾Ã¾Ã¾Ã¾Ã¾Ã¾Ã¾Ã¾Ã¾Ã¾Ã¾Ã¾Ã¾Ã¾Ã¾Ã¾                Ã¾Ã¾Ã¾Ã¾Ã¾Ã¾Ã¾Ã¾Ã¾Ã¾Ã¾Ã¾Ã¾Ã¾Ã¾Ã¾Ã¾Ã¾Ã¾Ã¾Ã¾Ã¾Ã¾Ã¾Ã¾Ã¾Ã¾Ã¾
 echo.
 
-rem Inserção de links com no máximo 5 links
+rem InserÃ§Ã£o de links com no mÃ¡ximo 5 links
 choice /c "1234" /n /m "Digite> "
 goto %errorlevel%
 
@@ -36,18 +36,24 @@ cls
 goto main
 
 :2
-set /p site3="Site 1> "
-set /p site4="Site 2> "
-set /p site5="Site 3> "
-set /p site6="Site 4> "
-set /p site7="Site 5> "
+echo.
+echo =================================================================================
+echo Para usar este recurso, â€š necessÂ rio subir o caminho do arquivo TXT com os links.
+echo =================================================================================
+echo.
 
-start %site3%
-start %site4%
-start %site5%
-start %site6%
-start %site7%
-
+rem para usar este recurso, Ã© necessÃ¡rio subir um arquivo TXT com os links, apenas o links e nada mais.
+setlocal enabledelayedexpansion
+@echo off
+setlocal enabledelayedexpansion
+set /p "caminho=Digite o caminho do arquivo txt> "
+set /a contador=0
+for /f "delims=" %%i in (%caminho%) do (
+    set /a contador+=1
+    echo Linha: !contador! ^| %%i
+)
+endlocal
+)
 pause >nul
 cls
 goto main
@@ -59,4 +65,4 @@ pause >nul
 cls
 goto main
 
-pause >nul                                    
+pause >nul
